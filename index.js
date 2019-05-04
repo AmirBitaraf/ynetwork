@@ -10,7 +10,7 @@ module.exports = {
         if (payload) payload = this.normalize(payload);
 
         if (this.debug) {
-            console.log('ynetwork', method, url, payload);
+            //console.log('ynetwork', method, url, payload);
         }
 
         if (this.shortCircuit) {
@@ -19,7 +19,7 @@ module.exports = {
             
             if (shortCircuitResult && typeof shortCircuitResult === 'object') {
 
-                console.log('ynetwork shortcircuited', method, url);
+                //console.log('ynetwork shortcircuited', method, url);
 
                 return {result: shortCircuitResult.data, status: shortCircuitResult.status}
 
@@ -37,7 +37,7 @@ module.exports = {
             response = result.data;
 
             if (this.debug) {
-                console.log('ynetwork done', url, status, response);
+                //console.log('ynetwork done', url, status, response);
             }
 
         }
@@ -47,7 +47,7 @@ module.exports = {
             response = error.response ? error.response.data : null;
 
             if (this.debug) {
-                console.log('ynetwork error', url, response, error);
+                //console.log('ynetwork error', url, response, error);
             }
 
         }
